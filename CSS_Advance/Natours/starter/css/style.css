@@ -71,6 +71,7 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    text-align: center;
  } 
 
  @keyframes moveInLeft {
@@ -107,10 +108,74 @@ body{
     }
 }
 
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 100;
+        transform: 0;
+    }
+}
+
+.btn:link,
+.btn:visited{
+    background-color: white;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 40px;
+    border-radius: 100px;
+    transition: all 2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,2);
+}
 
 
+.btn-white{
+    background-color: #fff;
+    animation: moveInBottom 0.5s ease-out;
+    color: #777;
+}
 
+.btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    display: inline-block;   
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position:absolute;
+    transition: all 0.4s;
+}
 
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn-animated{
+    animation: moveInBottom 2s ease-out;
+    animation-fill-mode: backwards;
+}
 
 
 
