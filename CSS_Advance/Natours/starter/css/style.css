@@ -19,45 +19,40 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 52px;
-  left: 52px; }
-
-.header__logo {
-  height: 36px; }
-
-.heading-primary--main {
-  display: block;
-  font-weight: 400;
-  letter-spacing: 35px;
-  font-size: 6rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-weight: 700;
-  letter-spacing: 18.5px;
-  font-size: 2rem;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
+  .header__logo-box {
+    position: absolute;
+    top: 52px;
+    left: 52px; }
+  .header__logo {
+    height: 36px; }
+  .header__text-box {
+    position: absolute;
+    /*center view*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; }
-
-.header__text-box {
-  position: absolute;
-  /*center view*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .heading-primary--main {
+    display: block;
+    font-weight: 400;
+    letter-spacing: 35px;
+    font-size: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 18.5px;
+    font-size: 2rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -87,8 +82,7 @@ body {
     opacity: 100;
     transform: 0; } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   background-color: white;
   text-transform: uppercase;
   padding: 15px 40px;
