@@ -3,7 +3,7 @@
 
     &:link,
     &:visited{
-        background-color: white;
+        // background-color: white;
         text-transform: uppercase;
         padding: 15px 40px;
         display: inline-block;
@@ -26,9 +26,21 @@
     
     
     &--white{
-        background-color:$color-white;
-        animation: moveInBottom 0.5s ease-out;
-        color:$color-grey-dark;
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green{
+        // animation: moveInBottom 0.5s ease-out;
+        background-color: $color-primary;
+        color: $color-white;
+        &::after {
+            background-color: $color-primary;
+        }
     }
     
     &::after{
